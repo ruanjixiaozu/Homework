@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
 
     public int bulletCount = 0;
     
-    // Update is called once per frame
+    // Update is called on ce per frame
     void Update()
     {
         if (timeVal >= 0.2f)
