@@ -51,7 +51,8 @@ public class GameManager : MonoBehaviour
     private float timer = 100f;
     public GameObject time;
     private bool isStart = false;
-
+     
+  
     public int bulletCount;
 
     private int GunPurchaseNum = 0;
