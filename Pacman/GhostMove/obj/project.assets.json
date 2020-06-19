@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Home\\Homework\\GhostMove\\GhostMove.csproj",
-      "projectName": "GhostMove",
-      "projectPath": "D:\\Home\\Homework\\GhostMove\\GhostMove.csproj",
+      "projectUniqueName": "D:\\Home\\Homework\\Pacdot\\Pacdot.csproj",
+      "projectName": "Pacdot",
+      "projectPath": "D:\\Home\\Homework\\Pacdot\\Pacdot.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Home\\Homework\\GhostMove\\obj\\",
+      "outputPath": "D:\\Home\\Homework\\Pacdot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

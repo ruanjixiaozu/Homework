@@ -1,33 +1,58 @@
-﻿using Mono.Data.Sqlite;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SqliteManager : MonoBehaviour
+public class Pacdot : MonoBehaviour
 {
+    public bool isSuperPacdot = false;
+    public bool isMidPacdot = false;
 
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.name == "Pacman")
+        {
+            if (isSuperPacdot)
+            {
+                GameManager.Instance.OnEatPacdot(gameObject);
+                GameManager.Instance.OnEatSuperPacdot();
+                Destroy(gameObject);
+            }
 
-        SqliteDbHelper db = new SqliteDbHelper("data source=scoreDB.db");
+            else if (isMidPacdot)
+            {
+                GameManager.Instance.OnEatPacdot(gameObject);
+                GameManager.Instance.OnEatMidPacdot();
+                Destroy(gameObject);
+            }
 
-        //   db.InsertInto("leaderboard",3,50);
+            else
+            {
+                GameManager.Instance.OnEatPacdot(gameObject);
+                Destroy(gameObject);
+            }
+        }
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.name == "Pacman")
+        {
+            if (isSuperPacdot)
+            {
+                GameManager.Instance.OnEatPacdot(gameObject);
+                GameManager.Instance.OnEatSuperPacdot();
+                Destroy(gameObject);
+            }
 
+            else if (isMidPacdot)
+            {
+                GameManager.Instance.OnEatPacdot(gameObject);
+                GameManager.Instance.OnEatMidPacdot();
+                Destroy(gameObject);
+            }
 
-
-        //然后在删掉两条数据
-        //db.Delete("biao", new string[] { "qq", "qq" }, new string[] { "'123456789'", "'223456789'" });
-        //动态查询数据信息
-        //  SqliteDataReader sqReader = db.SelectWhere("biao", new string[] { "name", "email" }, new string[] { "qq" }, new string[] { "=" }, new string[] { "123456789" });
-
-
-        //while (sqReader.Read())                 //表名，查询数据集合，字段，操作，值
-        //{
-        //    Debug.Log(sqReader.GetString(sqReader.GetOrdinal("name")) + sqReader.GetString(sqReader.GetOrdinal("email")));
-        //}
-        //删除表
-        //db.DeleteContents("biao");
-        //关闭对象
-        db.CloseSqlConnection();
+            else
+            {
+                GameManager.Instance.OnEatPacdot(gameObject);
+                Destroy(gameObject);
+            }
+        }
     }
 }
